@@ -9,4 +9,6 @@ import java.util.List;
 public interface ZooServices {
 
     List<Zoo> findAllZoos();
+
+    Zoo findZooByID(long zooID);
 }
