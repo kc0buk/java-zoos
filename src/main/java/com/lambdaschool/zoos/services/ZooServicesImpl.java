@@ -4,11 +4,13 @@ import com.lambdaschool.zoos.models.Zoo;
 import com.lambdaschool.zoos.repository.ZooRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Transactional
 @Service(value = "zooServices")
 public class ZooServicesImpl implements ZooServices {
 
@@ -27,5 +29,14 @@ public class ZooServicesImpl implements ZooServices {
         Zoo zoo = zoorepo.findById(zooID)
                 .orElseThrow(() -> new EntityNotFoundException("Zoo with ID " + zooID + " was not found."));
         return zoo;
+    }
+
+    @Transactional
+    @Override
+    public void deleteZooByID(long zooID) {
+
+        zoorepo.findById(zooID)
+                .orElseThrow(() -> new EntityNotFoundException("Zoo with ID " + zooID + " was not found."));
+        zoorepo.deleteById(zooID);
     }
 }

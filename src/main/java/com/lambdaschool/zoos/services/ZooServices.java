@@ -11,4 +11,6 @@ public interface ZooServices {
     List<Zoo> findAllZoos();
 
     Zoo findZooByID(long zooID);
+
+    void deleteZooByID(long zooID);
 }
