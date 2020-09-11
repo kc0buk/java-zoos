@@ -417,20 +417,21 @@ Status OK
 
 ## Instructions
 
-* [ ] Please fork and clone this repository. This repository does not have a starter project, so create one inside of the cloned repository folder. Regularly commit and push your code as appropriate.
-* [ ] Create the entities needed to store this data.
-* [ ] A data.sql file has been provided with seed data. You can use this class directly or modify it to fit your models. However, the data found in the file is the seed data to use!
-* [ ] Add default Swagger Documentation
+* [x] Please fork and clone this repository. This repository does not have a starter project, so create one inside of the cloned repository folder. Regularly commit and push your code as appropriate.
+* [x] Submit pull request (https://github.com/kc0buk/java-zoos/pull/1).
+* [x] Create the entities needed to store this data.
+* [x] A data.sql file has been provided with seed data. You can use this class directly or modify it to fit your models. However, the data found in the file is the seed data to use!
+* [x] Add default Swagger Documentation
 
 Expose the following Endpoint
 
-* [ ] GET /animals/count -  that returns a JSON object list listing the animals and a count of how many zoos where they can be found. Use a custom query for this.
-* [ ] GET /zoos/zoos - returns all zoos with their phone numbers and animals
-* [ ] GET /zoos/zoo/{id} - returns all information related to a zoo based on its id
+* [x] GET /animals/count -  that returns a JSON object list listing the animals and a count of how many zoos where they can be found. Use a custom query for this.
+* [x] GET /zoos/zoos - returns all zoos with their phone numbers and animals
+* [x] GET /zoos/zoo/{id} - returns all information related to a zoo based on its id
 
 ## Stretch goals
 
 * [ ] POST /zoos/zoo - adds a zoo including new telephone number and zoo animal combinations. The Animal Type must already exist.  * In the header return as the location of the newly created zoo POST /zoos/zoo/{id}
 * [ ] PUT /zoos/zoo/{id} - Completely replace the zoo record and all accompany records based off of the given zoo id.
 * [ ] PATCH /zoos/zoo{id} - Updates the zoo with new information. Only the new data is to be sent from the frontend client.
-* [ ] DELETE /zoos/zoo/{id} - delete the zoo, associated phone numbers, and zoo animals combination associated with this zoo id
+* [x] DELETE /zoos/zoo/{id} - delete the zoo, associated phone numbers, and zoo animals combination associated with this zoo id
